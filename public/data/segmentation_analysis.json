@@ -1,62 +1,81 @@
 {
   "Global": {
-    "By Type": {
-      "Sub-Normothermic Perfusion (20–34°C)": {},
-      "Warm or Normothermic Perfusion (35–37°C)": {}
+    "By Sweetener Type": {
+      "Natural Sweeteners": {
+        "Plant-Derived": {
+          "Stevia": {},
+          "Monk Fruit": {},
+          "Maple Syrup": {},
+          "Agave": {}
+        },
+        "Sugar Alcohols": {
+          "Erythritol": {},
+          "Xylitol": {},
+          "Sorbitol": {},
+          "Maltitol": {}
+        },
+        "Other Natural": {
+          "Honey": {},
+          "Date Sugar": {},
+          "Molasses": {}
+        }
+      },
+      "Artificial Sweeteners": {
+        "High-Intensity": {
+          "Aspartame": {},
+          "Sucralose": {},
+          "Acesulfame K": {},
+          "Saccharin": {},
+          "Stevia (modified)": {}
+        },
+        "Low-Intensity": {
+          "Cyclamate": {},
+          "Neotame": {},
+          "Thaumatin": {}
+        }
+      }
     },
-    "By Organ Type": {
-      "Liver": {},
-      "Heart": {},
-      "Lung": {},
-      "Kidney": {},
-      "Others (Pancreas, Small bowel / Intestine, Composite Tissues / Limb Perfusion (emerging use cases))": {}
+    "By Form": {
+      "Powder": {},
+      "Liquid / Syrup": {},
+      "Granules / Crystals": {},
+      "Concentrates / Extracts": {}
     },
-    "Application / Use Case": {
-      "Organ Preservation": {},
-      "Viability Assessment": {},
-      "Physiologic Transport": {},
-      "Reconditioning Marginal Organs": {},
-      "Others (Research Use / Protocol development)": {}
+    "By Food Industry Application": {
+      "Beverages": {
+        "Soft Drinks (Carbonated Beverages)": {},
+        "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
+        "Dairy-Based Beverages (Milkshakes, Yogurt Drinks)": {},
+        "Sports and Energy Drinks": {}
+      },
+      "Bakery & Confectionery": {
+        "Baked Goods (Cakes, Cookies, Muffins)": {},
+        "Confectionery (Candies, Chocolates, Chewing Gum)": {}
+      },
+      "Dairy & Desserts": {
+        "Ice Cream & Frozen Desserts": {},
+        "Puddings & Custards": {},
+        "Yogurt & Dairy Alternatives": {}
+      },
+      "Snacks & Cereals": {
+        "Granola Bars, Snack Bars, Cereal": {},
+        "Processed Snack Foods": {}
+      },
+      "Sauces, Dressings & Condiments": {
+        "Ketchup & Sauces": {},
+        "Salad Dressings & Mayonnaise": {}
+      }
     },
-    "By End User": {
-      "Hospitals & Clinics": {},
-      "Specialty Clinic/Centers": {},
-      "Transplant Centers": {},
-      "Others (Research Institutes/Centers, Organ Procurement Organizations, etc.)": {}
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (via. Distributors, etc.)": {}
     },
     "By Region": {
-      "North America": {
-        "U.S.": {},
-        "Canada": {}
-      },
-      "Europe": {
-        "U.K.": {},
-        "Germany": {},
-        "Italy": {},
-        "France": {},
-        "Spain": {},
-        "Russia": {},
-        "Rest of Europe": {}
-      },
-      "Asia Pacific": {
-        "China": {},
-        "India": {},
-        "Japan": {},
-        "South Korea": {},
-        "ASEAN": {},
-        "Australia": {},
-        "Rest of Asia Pacific": {}
-      },
-      "Latin America": {
-        "Brazil": {},
-        "Argentina": {},
-        "Mexico": {},
-        "Rest of Latin America": {}
-      },
-      "Middle East & Africa": {
-        "GCC": {},
-        "South Africa": {},
-        "Rest of Middle East & Africa": {}
+      "India": {
+        "North India": {},
+        "South India": {},
+        "West India": {},
+        "East India": {}
       }
     }
   }
