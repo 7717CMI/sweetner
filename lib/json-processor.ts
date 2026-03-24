@@ -1152,8 +1152,8 @@ async function processSegmentTypeAsync(
           cagr = data.CAGR
         }
       } else {
-        // Calculate CAGR from base year (2023) to forecast year
-        const cagrStartYear = allYears[0] + 4 // Base year = 2023 for 2019-2031 data
+        // Calculate CAGR from base year (2026) to forecast year (2033)
+        const cagrStartYear = allYears[0] + 5 // Base year = 2026 for 2021-2033 data
         const cagrEndYear = allYears[allYears.length - 1]
         const startVal = timeSeries[cagrStartYear] || 0
         const endVal = timeSeries[cagrEndYear] || 0
@@ -1481,9 +1481,9 @@ export async function processJsonDataAsync(
       forecast_year: forecastYear,
       historical_years: allYears.filter(y => y <= historicalEndYear),
       forecast_years: allYears.filter(y => y > historicalEndYear),
-      currency: 'USD',
-      value_unit: 'Million',
-      volume_unit: 'Million Units',
+      currency: 'INR',
+      value_unit: 'INR Cr',
+      volume_unit: 'KT',
       has_value: valueRecords.length > 0,
       has_volume: volumeRecords.length > 0,
     }
