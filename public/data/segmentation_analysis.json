@@ -1,8 +1,9 @@
 {
-  "Global": {
+  "India": {
     "By Sweetener Type": {
       "Natural Sweeteners": {
         "Plant-Derived": {
+          "Sucrose": {},
           "Stevia": {},
           "Monk Fruit": {},
           "Maple Syrup": {},
@@ -41,7 +42,7 @@
       "Granules / Crystals": {},
       "Concentrates / Extracts": {}
     },
-    "By Food Industry Application": {
+    "By Food & Beverage Industry Application": {
       "Beverages": {
         "Soft Drinks (Carbonated Beverages)": {},
         "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
@@ -71,12 +72,302 @@
       "Indirect (via. Distributors, etc.)": {}
     },
     "By Region": {
-      "India": {
-        "North India": {},
-        "South India": {},
-        "West India": {},
-        "East India": {}
+      "North India": {},
+      "South India": {},
+      "West India": {},
+      "East India": {}
+    }
+  },
+  "North India": {
+    "By Sweetener Type": {
+      "Natural Sweeteners": {
+        "Plant-Derived": {
+          "Sucrose": {},
+          "Stevia": {},
+          "Monk Fruit": {},
+          "Maple Syrup": {},
+          "Agave": {}
+        },
+        "Sugar Alcohols": {
+          "Erythritol": {},
+          "Xylitol": {},
+          "Sorbitol": {},
+          "Maltitol": {}
+        },
+        "Other Natural": {
+          "Honey": {},
+          "Date Sugar": {},
+          "Molasses": {}
+        }
+      },
+      "Artificial Sweeteners": {
+        "High-Intensity": {
+          "Aspartame": {},
+          "Sucralose": {},
+          "Acesulfame K": {},
+          "Saccharin": {},
+          "Stevia (modified)": {}
+        },
+        "Low-Intensity": {
+          "Cyclamate": {},
+          "Neotame": {},
+          "Thaumatin": {}
+        }
       }
+    },
+    "By Form": {
+      "Powder": {},
+      "Liquid / Syrup": {},
+      "Granules / Crystals": {},
+      "Concentrates / Extracts": {}
+    },
+    "By Food & Beverage Industry Application": {
+      "Beverages": {
+        "Soft Drinks (Carbonated Beverages)": {},
+        "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
+        "Dairy-Based Beverages (Milkshakes, Yogurt Drinks)": {},
+        "Sports and Energy Drinks": {}
+      },
+      "Bakery & Confectionery": {
+        "Baked Goods (Cakes, Cookies, Muffins)": {},
+        "Confectionery (Candies, Chocolates, Chewing Gum)": {}
+      },
+      "Dairy & Desserts": {
+        "Ice Cream & Frozen Desserts": {},
+        "Puddings & Custards": {},
+        "Yogurt & Dairy Alternatives": {}
+      },
+      "Snacks & Cereals": {
+        "Granola Bars, Snack Bars, Cereal": {},
+        "Processed Snack Foods": {}
+      },
+      "Sauces, Dressings & Condiments": {
+        "Ketchup & Sauces": {},
+        "Salad Dressings & Mayonnaise": {}
+      }
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (via. Distributors, etc.)": {}
+    }
+  },
+  "South India": {
+    "By Sweetener Type": {
+      "Natural Sweeteners": {
+        "Plant-Derived": {
+          "Sucrose": {},
+          "Stevia": {},
+          "Monk Fruit": {},
+          "Maple Syrup": {},
+          "Agave": {}
+        },
+        "Sugar Alcohols": {
+          "Erythritol": {},
+          "Xylitol": {},
+          "Sorbitol": {},
+          "Maltitol": {}
+        },
+        "Other Natural": {
+          "Honey": {},
+          "Date Sugar": {},
+          "Molasses": {}
+        }
+      },
+      "Artificial Sweeteners": {
+        "High-Intensity": {
+          "Aspartame": {},
+          "Sucralose": {},
+          "Acesulfame K": {},
+          "Saccharin": {},
+          "Stevia (modified)": {}
+        },
+        "Low-Intensity": {
+          "Cyclamate": {},
+          "Neotame": {},
+          "Thaumatin": {}
+        }
+      }
+    },
+    "By Form": {
+      "Powder": {},
+      "Liquid / Syrup": {},
+      "Granules / Crystals": {},
+      "Concentrates / Extracts": {}
+    },
+    "By Food & Beverage Industry Application": {
+      "Beverages": {
+        "Soft Drinks (Carbonated Beverages)": {},
+        "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
+        "Dairy-Based Beverages (Milkshakes, Yogurt Drinks)": {},
+        "Sports and Energy Drinks": {}
+      },
+      "Bakery & Confectionery": {
+        "Baked Goods (Cakes, Cookies, Muffins)": {},
+        "Confectionery (Candies, Chocolates, Chewing Gum)": {}
+      },
+      "Dairy & Desserts": {
+        "Ice Cream & Frozen Desserts": {},
+        "Puddings & Custards": {},
+        "Yogurt & Dairy Alternatives": {}
+      },
+      "Snacks & Cereals": {
+        "Granola Bars, Snack Bars, Cereal": {},
+        "Processed Snack Foods": {}
+      },
+      "Sauces, Dressings & Condiments": {
+        "Ketchup & Sauces": {},
+        "Salad Dressings & Mayonnaise": {}
+      }
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (via. Distributors, etc.)": {}
+    }
+  },
+  "West India": {
+    "By Sweetener Type": {
+      "Natural Sweeteners": {
+        "Plant-Derived": {
+          "Sucrose": {},
+          "Stevia": {},
+          "Monk Fruit": {},
+          "Maple Syrup": {},
+          "Agave": {}
+        },
+        "Sugar Alcohols": {
+          "Erythritol": {},
+          "Xylitol": {},
+          "Sorbitol": {},
+          "Maltitol": {}
+        },
+        "Other Natural": {
+          "Honey": {},
+          "Date Sugar": {},
+          "Molasses": {}
+        }
+      },
+      "Artificial Sweeteners": {
+        "High-Intensity": {
+          "Aspartame": {},
+          "Sucralose": {},
+          "Acesulfame K": {},
+          "Saccharin": {},
+          "Stevia (modified)": {}
+        },
+        "Low-Intensity": {
+          "Cyclamate": {},
+          "Neotame": {},
+          "Thaumatin": {}
+        }
+      }
+    },
+    "By Form": {
+      "Powder": {},
+      "Liquid / Syrup": {},
+      "Granules / Crystals": {},
+      "Concentrates / Extracts": {}
+    },
+    "By Food & Beverage Industry Application": {
+      "Beverages": {
+        "Soft Drinks (Carbonated Beverages)": {},
+        "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
+        "Dairy-Based Beverages (Milkshakes, Yogurt Drinks)": {},
+        "Sports and Energy Drinks": {}
+      },
+      "Bakery & Confectionery": {
+        "Baked Goods (Cakes, Cookies, Muffins)": {},
+        "Confectionery (Candies, Chocolates, Chewing Gum)": {}
+      },
+      "Dairy & Desserts": {
+        "Ice Cream & Frozen Desserts": {},
+        "Puddings & Custards": {},
+        "Yogurt & Dairy Alternatives": {}
+      },
+      "Snacks & Cereals": {
+        "Granola Bars, Snack Bars, Cereal": {},
+        "Processed Snack Foods": {}
+      },
+      "Sauces, Dressings & Condiments": {
+        "Ketchup & Sauces": {},
+        "Salad Dressings & Mayonnaise": {}
+      }
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (via. Distributors, etc.)": {}
+    }
+  },
+  "East India": {
+    "By Sweetener Type": {
+      "Natural Sweeteners": {
+        "Plant-Derived": {
+          "Sucrose": {},
+          "Stevia": {},
+          "Monk Fruit": {},
+          "Maple Syrup": {},
+          "Agave": {}
+        },
+        "Sugar Alcohols": {
+          "Erythritol": {},
+          "Xylitol": {},
+          "Sorbitol": {},
+          "Maltitol": {}
+        },
+        "Other Natural": {
+          "Honey": {},
+          "Date Sugar": {},
+          "Molasses": {}
+        }
+      },
+      "Artificial Sweeteners": {
+        "High-Intensity": {
+          "Aspartame": {},
+          "Sucralose": {},
+          "Acesulfame K": {},
+          "Saccharin": {},
+          "Stevia (modified)": {}
+        },
+        "Low-Intensity": {
+          "Cyclamate": {},
+          "Neotame": {},
+          "Thaumatin": {}
+        }
+      }
+    },
+    "By Form": {
+      "Powder": {},
+      "Liquid / Syrup": {},
+      "Granules / Crystals": {},
+      "Concentrates / Extracts": {}
+    },
+    "By Food & Beverage Industry Application": {
+      "Beverages": {
+        "Soft Drinks (Carbonated Beverages)": {},
+        "Non-Carbonated Beverages (Juices, Iced Teas, Energy Drinks)": {},
+        "Dairy-Based Beverages (Milkshakes, Yogurt Drinks)": {},
+        "Sports and Energy Drinks": {}
+      },
+      "Bakery & Confectionery": {
+        "Baked Goods (Cakes, Cookies, Muffins)": {},
+        "Confectionery (Candies, Chocolates, Chewing Gum)": {}
+      },
+      "Dairy & Desserts": {
+        "Ice Cream & Frozen Desserts": {},
+        "Puddings & Custards": {},
+        "Yogurt & Dairy Alternatives": {}
+      },
+      "Snacks & Cereals": {
+        "Granola Bars, Snack Bars, Cereal": {},
+        "Processed Snack Foods": {}
+      },
+      "Sauces, Dressings & Condiments": {
+        "Ketchup & Sauces": {},
+        "Salad Dressings & Mayonnaise": {}
+      }
+    },
+    "By Distribution Channel": {
+      "Direct": {},
+      "Indirect (via. Distributors, etc.)": {}
     }
   }
 }
