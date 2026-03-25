@@ -2018,6 +2018,25 @@ export function prepareIntelligentMultiLevelData(
         )
       } else {
         // Standard logic for non-Level 1 selections
+        // GEOGRAPHY MODE FIX: When user selected a parent segment (e.g., "Plant-Derived") and we're in geography mode,
+        // the group contains both the aggregated parent record and leaf children.
+        // Prefer the aggregated record matching the selected segment for accurate totals.
+        if (viewMode === 'geography-mode' && hasExplicitLevel1Selection) {
+          const aggregatedForSelected = groupRecords.find(r =>
+            r.is_aggregated && selectedLevel1Segments.includes(r.segment)
+          )
+          if (aggregatedForSelected) {
+            dataPoint[key] = aggregatedForSelected.time_series[year] || 0
+            return
+          }
+          // If no aggregated record, sum all leaf records for this geography
+          const leafRecords = groupRecords.filter(r => !r.is_aggregated)
+          if (leafRecords.length > 1) {
+            dataPoint[key] = leafRecords.reduce((sum, r) => sum + (r.time_series[year] || 0), 0)
+            return
+          }
+        }
+
         const leafRecord = groupRecords.find(r => !r.is_aggregated)
 
         if (leafRecord) {

@@ -197,8 +197,11 @@ export const useDashboardStore = create<DashboardStore>((set, get) => ({
       ? currentFilters.aggregationLevel 
       : defaultFilters.aggregationLevel
     
-    set({ 
-      data, 
+    // Set currency from data metadata (e.g., 'INR' or 'USD')
+    const dataCurrency = (data.metadata.currency === 'INR' ? 'INR' : 'USD') as 'USD' | 'INR'
+
+    set({
+      data,
       filteredData: [], // Clear filtered data when new data is set
       error: null,
       filters: {
@@ -208,7 +211,8 @@ export const useDashboardStore = create<DashboardStore>((set, get) => ({
       opportunityFilters: defaultOpportunityFilters,
       defaultFiltersLoaded: true,
       opportunityFiltersLoaded: true,
-      geographyFiltersBySegmentType: {} // Clear geography filters for new market
+      geographyFiltersBySegmentType: {}, // Clear geography filters for new market
+      currency: dataCurrency // Set currency from data metadata
     })
   },
   

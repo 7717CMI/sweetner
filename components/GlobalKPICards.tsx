@@ -128,9 +128,9 @@ export function GlobalKPICards() {
     // Get currency preference
     const selectedCurrency = currency || data.metadata.currency || 'USD'
     const isINR = selectedCurrency === 'INR'
-    
+
     // Values in time_series are already in the unit specified by value_unit/volume_unit
-    // For example, if value_unit is "Million", values are already in millions (e.g., 811.6 means $811.6 Million)
+    // For example, if value_unit is "INR Cr", values are already in crores (e.g., 114290.7 means ₹114,290.7 Cr)
     // No conversion is needed - just display the values with the appropriate unit label
     const unit = filters.dataType === 'value'
       ? (data.metadata.value_unit || 'Million')
@@ -165,7 +165,7 @@ export function GlobalKPICards() {
       absoluteGrowth: absoluteGrowthDisplay,
       growthPercentage,
       currency: selectedCurrency,
-      unit: isINR ? '' : (unit || 'Million'),
+      unit: unit || 'Million',
       dataTypeLabel,
       geographyLabel,
       segmentTypeLabel,
@@ -209,11 +209,9 @@ export function GlobalKPICards() {
                 {kpiData.dataTypeLabel} {kpiData.startYear}
               </p>
               <p className="text-base font-bold text-black leading-tight">
-                {kpiData.dataType === 'value' && kpiData.isINR
-                  ? `₹ ${formatIndianNumber(kpiData.marketSizeStart)}`
-                  : kpiData.dataType === 'value'
-                  ? `$ ${kpiData.marketSizeStart.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
-                  : `${kpiData.marketSizeStart.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
+                {kpiData.dataType === 'value'
+                  ? `${kpiData.isINR ? '₹' : '$'} ${kpiData.marketSizeStart.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
+                  : `${kpiData.marketSizeStart.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
               </p>
             </div>
           </div>
@@ -228,11 +226,9 @@ export function GlobalKPICards() {
                 {kpiData.dataTypeLabel} {kpiData.endYear}
               </p>
               <p className="text-base font-bold text-black leading-tight">
-                {kpiData.dataType === 'value' && kpiData.isINR
-                  ? `₹ ${formatIndianNumber(kpiData.marketSizeEnd)}`
-                  : kpiData.dataType === 'value'
-                  ? `$ ${kpiData.marketSizeEnd.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
-                  : `${kpiData.marketSizeEnd.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
+                {kpiData.dataType === 'value'
+                  ? `${kpiData.isINR ? '₹' : '$'} ${kpiData.marketSizeEnd.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
+                  : `${kpiData.marketSizeEnd.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
               </p>
             </div>
           </div>
@@ -262,11 +258,9 @@ export function GlobalKPICards() {
                 Absolute Growth ({kpiData.startYear}-{kpiData.endYear})
               </p>
               <p className="text-base font-bold text-black leading-tight">
-                {kpiData.dataType === 'value' && kpiData.isINR
-                  ? `₹ ${formatIndianNumber(kpiData.absoluteGrowth)}`
-                  : kpiData.dataType === 'value'
-                  ? `$ ${kpiData.absoluteGrowth.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
-                  : `${kpiData.absoluteGrowth.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
+                {kpiData.dataType === 'value'
+                  ? `${kpiData.isINR ? '₹' : '$'} ${kpiData.absoluteGrowth.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`
+                  : `${kpiData.absoluteGrowth.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${kpiData.unit}`}
               </p>
               <p className="text-[10px] text-gray-600 mt-0.5">
                 +{kpiData.growthPercentage.toFixed(1)}% increase
