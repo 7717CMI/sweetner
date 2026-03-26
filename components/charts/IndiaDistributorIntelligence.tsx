@@ -113,7 +113,7 @@ function DistributorDetailModal({
                           {key === 'Email' && value && value !== '' ? (
                             <a href={`mailto:${value}`} className="text-[#168AAD] hover:underline">{value}</a>
                           ) : key === 'LinkedIn' && value && value !== '' ? (
-                            <a href={value} target="_blank" rel="noopener noreferrer" className="text-[#168AAD] hover:underline">{value}</a>
+                            <a href={value.startsWith('http') ? value : `https://${value}`} target="_blank" rel="noopener noreferrer" className="text-[#168AAD] hover:underline">{value}</a>
                           ) : (
                             value || '-'
                           )}
@@ -302,7 +302,7 @@ export default function IndiaDistributorIntelligence({ title, height = 600 }: In
                         </a>
                       ) : header === 'LinkedIn' && value ? (
                         <a
-                          href={value}
+                          href={value.startsWith('http') ? value : `https://${value}`}
                           onClick={(e) => e.stopPropagation()}
                           target="_blank"
                           rel="noopener noreferrer"
