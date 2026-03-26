@@ -15,6 +15,7 @@ import { CompetitiveIntelligence } from '@/components/charts/CompetitiveIntellig
 import CustomerIntelligenceHeatmap from '@/components/charts/CustomerIntelligenceHeatmap'
 import DistributorsIntelligence from '@/components/charts/DistributorsIntelligenceTable'
 import CustomerIntelligenceDatabase from '@/components/charts/CustomerIntelligenceDatabase'
+import IndiaDistributorIntelligence from '@/components/charts/IndiaDistributorIntelligence'
 import { InsightsPanel } from '@/components/InsightsPanel'
 import { FilterPresets } from '@/components/filters/FilterPresets'
 import { ChartGroupSelector } from '@/components/filters/ChartGroupSelector'
@@ -31,7 +32,7 @@ export default function DashboardPage() {
   const { setData, setLoading, setError, data, isLoading, error, filters, selectedChartGroup, dashboardName } = useDashboardStore()
   const [mounted, setMounted] = useState(false)
   const [hasCheckedStore, setHasCheckedStore] = useState(false)
-  const [activeTab, setActiveTab] = useState<'bar' | 'line' | 'heatmap' | 'table' | 'waterfall' | 'bubble' | 'competitive-intelligence' | 'customer-intelligence' | 'customer-intelligence-database'>('bar')
+  const [activeTab, setActiveTab] = useState<'bar' | 'line' | 'heatmap' | 'table' | 'waterfall' | 'bubble' | 'competitive-intelligence' | 'customer-intelligence' | 'customer-intelligence-database' | 'distributor-intelligence-table'>('bar')
   const [showInsights, setShowInsights] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [viewMode, setViewMode] = useState<'tabs' | 'vertical'>('tabs')
@@ -55,7 +56,8 @@ export default function DashboardPage() {
     'bubble': 'bubble',
     'competitive-intelligence': 'competitive-intelligence',
     'customer-intelligence': 'customer-intelligence',
-    'customer-intelligence-database': 'customer-intelligence-database'
+    'customer-intelligence-database': 'customer-intelligence-database',
+    'distributor-intelligence-table': 'distributor-intelligence-table'
   }
 
   // Auto-switch to first available tab when chart group changes
@@ -397,6 +399,18 @@ export default function DashboardPage() {
                             👤 Customer Intelligence
                           </button>
                         )}
+                        {isChartVisible('distributor-intelligence-table') && (
+                          <button
+                            onClick={() => setActiveTab('distributor-intelligence-table')}
+                            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+                              activeTab === 'distributor-intelligence-table'
+                                ? 'border-blue-500 text-blue-600'
+                                : 'border-transparent text-black hover:text-black hover:border-gray-300'
+                            }`}
+                          >
+                            Distributor Intelligence
+                          </button>
+                        )}
                       </>
                     )}
                   </nav>
@@ -512,6 +526,15 @@ export default function DashboardPage() {
                         />
                       </div>
                     )}
+
+                    {activeTab === 'distributor-intelligence-table' && (
+                      <div id="distributor-intelligence-chart">
+                        <IndiaDistributorIntelligence
+                          title="Distributor Intelligence Database - India Sweetener Market"
+                          height={600}
+                        />
+                      </div>
+                    )}
                   </>
                 ) : (
                   <div className="space-y-8">
@@ -607,6 +630,16 @@ export default function DashboardPage() {
                         <h3 className="text-lg font-semibold text-black mb-4">👤 Customer Intelligence Database</h3>
                         <CustomerIntelligenceDatabase
                           title="Customer Intelligence Database"
+                          height={600}
+                        />
+                      </div>
+                    )}
+
+                    {isChartVisible('distributor-intelligence-table') && (
+                      <div className="border-b pb-8">
+                        <h3 className="text-lg font-semibold text-black mb-4">Distributor Intelligence</h3>
+                        <IndiaDistributorIntelligence
+                          title="Distributor Intelligence Database - India Sweetener Market"
                           height={600}
                         />
                       </div>

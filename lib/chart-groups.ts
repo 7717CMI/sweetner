@@ -3,7 +3,7 @@
  * Defines the grouping of charts for different analytical perspectives
  */
 
-export type ChartGroupId = 'market-analysis' | 'coherent-opportunity'
+export type ChartGroupId = 'market-analysis' | 'coherent-opportunity' | 'distributor-intelligence'
 
 export interface ChartGroup {
   id: ChartGroupId
@@ -27,6 +27,13 @@ export const CHART_GROUPS: ChartGroup[] = [
     description: 'Opportunity identification and analysis',
     charts: ['bubble'],
     icon: '🎯'
+  },
+  {
+    id: 'distributor-intelligence',
+    label: 'Distributor Intelligence',
+    description: 'Distributor database and insights for India Sweetener Market',
+    charts: ['distributor-intelligence-table'],
+    icon: '📦'
   }
 ]
 
